@@ -1,0 +1,71 @@
+{
+
+	"meta":{
+		"description":"Pong and bullets."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":true
+	},
+
+	"game_elements":{
+		"top_wall":false,
+		"bottom_wall":false,
+		"ball":true,
+		"opponent":true,
+		"blocks":false,
+		"static_barriers":false
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color"},
+		"ui_color":{"distribution":"color"},
+		"indicator_color_1":{"distribution":"color"},
+		"indicator_color_2":{"distribution":"color"}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.1, "high":0.3},
+		"height":{"distribution":"uniform", "low":0.02, "high":0.04},
+		"speed":{"distribution":"uniform", "low":0.01, "high":0.015},
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{
+		"width":{"distribution":"uniform", "low":0.1, "high":0.3},
+		"height":{"distribution":"uniform", "low":0.02, "high":0.04},
+		"speed":{"distribution":"uniform", "low":0.01, "high":0.015},
+		"color":[255,0,100],
+		"skill_level":{"distribution":"uniform", "low":0.55, "high":0.65},
+		"can_shoot":true,
+		"tracks_ball":true
+	},
+
+	"ball_settings":{
+		"size":{"distribution":"uniform", "low":0.05, "high":0.1},
+		"speed":{"distribution":"uniform", "low":0.01, "high":0.015},
+		"color":[255,180,0],
+		"harmful":false
+	},
+
+	"blocks_settings":{},
+
+	"static_barrier_settings":{
+		"color":[150,100,200]
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

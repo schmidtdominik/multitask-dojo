@@ -1,0 +1,77 @@
+{
+
+	"meta":{
+		"description":"Shoot through the blockade and hit the enemy."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":true
+	},
+
+	"game_elements":{
+		"top_wall":true,
+		"bottom_wall":false,
+		"ball":false,
+		"opponent":true,
+		"blocks":true,
+		"static_barriers":false
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color"},
+		"ui_color":{"distribution":"color"},
+		"indicator_color_1":{"distribution":"color"},
+		"indicator_color_2":{"distribution":"color"}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.1, "high":0.3},
+		"height":0.03,
+		"speed":0.01,
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{
+		"width":{"distribution":"uniform", "low":0.1, "high":0.3},
+		"height":0.03,
+		"speed":0.007,
+		"color":[255,0,100],
+		"skill_level":{"distribution":"uniform", "low":0.3, "high":0.6},
+		"can_shoot":true,
+		"tracks_ball":false
+	},
+
+	"ball_settings":{},
+
+	"blocks_settings":{
+		"color":[161, 97, 37],
+		"creation_area":[0.01,0.35,0.98,0.2],
+		"rows":{"distribution":"uniform", "low":2, "high":4},
+		"cols":{"distribution":"uniform", "low":4, "high":6},
+		"per_row":"full",
+		"spacing":-0.01,
+		"harmful":true,
+		"clear_path":false,
+		"static_weave_fall":"static",
+		"points":0
+	},
+
+	"static_barrier_settings":{
+		"color":[150,100,200]
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

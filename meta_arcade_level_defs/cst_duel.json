@@ -1,0 +1,71 @@
+{
+
+	"meta":{
+		"description":"Shoot the enemy paddle before it shoots you."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":true
+	},
+
+	"game_elements":{
+		"top_wall":true,
+		"bottom_wall":true,
+		"ball":false,
+		"opponent":true,
+		"blocks":false,
+		"static_barriers":true
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color", "hrange":[0, 1], "srange":[0, 1.0], "lrange":[0, 0.8]},
+		"ui_color":{"distribution":"color", "hrange":[0, 1], "srange":[0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_1":{"distribution":"color", "hrange":[0, 1], "srange":[0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_2":{"distribution":"color", "hrange":[0, 1], "srange":[0, 1.0], "lrange":[0, 0.8]}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.15, "high":0.3},
+		"height":{"distribution":"uniform", "low":0.02, "high":0.05},
+		"speed":{"distribution":"uniform", "low":0.007, "high":0.011},
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{
+		"width":{"distribution":"uniform", "low":0.15, "high":0.3},
+		"height":{"distribution":"uniform", "low":0.02, "high":0.05},
+		"speed":{"distribution":"uniform", "low":0.007, "high":0.01},
+		"color":[255,0,100],
+		"skill_level":{"distribution":"uniform", "low":0.3, "high":0.6},
+		"can_shoot":true,
+		"tracks_ball":false
+	},
+
+	"ball_settings":{},
+
+	"blocks_settings":{},
+
+	"static_barrier_settings":{
+		"creation_area":[0.2,0.2,0.6,0.6],
+		"rows":{"distribution":"uniform", "low":1, "high":4},
+		"cols":{"distribution":"uniform", "low":1, "high":4},
+		"per_row":1,
+		"spacing":0.3,
+		"color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0.0, 0.8]}
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

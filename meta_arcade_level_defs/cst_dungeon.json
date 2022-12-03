@@ -1,0 +1,81 @@
+{
+
+	"meta":{
+		"description":"Collect the treasure to win, avoid the bouncing balls."
+	},
+
+	"actions":{
+		"up":true,
+		"down":true,
+		"left":true,
+		"right":true,
+		"fire":false
+	},
+
+	"game_elements":{
+		"top_wall":true,
+		"bottom_wall":true,
+		"ball":true,
+		"opponent":false,
+		"blocks":true,
+		"static_barriers":true
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0.0, 0.8]},
+		"ui_color":{"distribution":"color"},
+		"indicator_color_1":{"distribution":"color"},
+		"indicator_color_2":{"distribution":"color"}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.05, "high":0.09},
+		"height":{"distribution":"uniform", "low":0.05, "high":0.09},
+		"speed":0.01,
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{},
+
+	"ball_settings":{
+		"size":{"distribution":"uniform", "low":0.04, "high":0.14},
+		"speed":{"distribution":"uniform", "low":0.006, "high":0.01},
+		"color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0.0, 0.7]},
+		"harmful":true,
+		"num_balls":{"distribution":"uniform", "low":0, "high":5}
+	},
+
+	"blocks_settings":{
+		"color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0.0, 0.8]},
+		"creation_area":[0.02,0.2,0.96,0.08],
+		"rows":1,
+		"cols":10,
+		"per_row":1,
+		"spacing":-0.01,
+		"harmful":false,
+		"clear_path":false,
+		"static_weave_fall":"static",
+		"points":100.0
+	},
+
+	"static_barrier_settings":{
+		"color":[98, 90, 99],
+		"creation_area":[0.02,0.35,0.96,0.3],
+		"rows":3,
+		"cols":7,
+		"per_row":2,
+		"spacing":-0.01,
+		"clear_path":false
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

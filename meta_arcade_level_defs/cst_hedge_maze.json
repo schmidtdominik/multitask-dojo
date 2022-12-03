@@ -1,0 +1,64 @@
+{
+
+	"meta":{
+		"description":"Navigate to the top of the screen."
+	},
+
+	"actions":{
+		"up":true,
+		"down":true,
+		"left":true,
+		"right":true,
+		"fire":false
+	},
+
+	"game_elements":{
+		"top_wall":false,
+		"bottom_wall":true,
+		"ball":false,
+		"opponent":false,
+		"blocks":false,
+		"static_barriers":true
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"ui_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_1":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_2":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.04, "high":0.045},
+		"height":{"distribution":"uniform", "low":0.04, "high":0.045},
+		"speed":0.01,
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{},
+
+	"ball_settings":{},
+
+	"blocks_settings":{},
+
+	"static_barrier_settings":{
+		"color":[58, 184, 29],
+		"creation_area":[0.0,0.05,1.0,0.68],
+		"rows":{"distribution":"uniform", "low":3, "high":5},
+		"cols":{"distribution":"uniform", "low":3, "high":6},
+		"per_row":3,
+		"spacing":-0.05,
+		"clear_path":true
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

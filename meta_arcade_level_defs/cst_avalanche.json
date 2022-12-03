@@ -1,0 +1,68 @@
+{
+
+	"meta":{
+		"description":"Catch 50 falling blocks in a row."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":false
+	},
+
+	"game_elements":{
+		"top_wall":false,
+		"bottom_wall":false,
+		"ball":false,
+		"opponent":false,
+		"blocks":true,
+		"static_barriers":false
+	},
+
+	"display_settings":{
+		"background_color": {"distribution":"color"},
+		"ui_color":{"distribution":"color"},
+		"indicator_color_1":{"distribution":"color"},
+		"indicator_color_2":{"distribution":"color"}
+	},
+
+	"player_settings":{
+		"width":{"distribution":"uniform", "low":0.025, "high":0.17},
+		"height":{"distribution":"uniform", "low":0.025, "high":0.17},
+		"speed":{"distribution":"uniform", "low":0.005, "high":0.018},
+		"color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0.7, 1.0]},
+		"steering":0.5
+	},
+
+	"opponent_settings":{},
+
+	"ball_settings":{},
+
+	"blocks_settings":{
+		"creation_area":[0.05,-1.0,0.9,1.0],
+		"rows":{"distribution":"uniform", "low":4, "high":8},
+		"cols":{"distribution":"uniform", "low":4, "high":8},
+		"per_row":{"distribution":"uniform", "low":1, "high":2},
+		"spacing":0.4,
+		"color":{"distribution":"color"},
+		"static_weave_fall":"fall",
+		"speed":{"distribution":"uniform", "low":0.002, "high":0.005},
+		"harmful":false,
+		"points":2
+	},
+
+	"static_barrier_settings":{
+		"color":[38, 101, 209]
+	},
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

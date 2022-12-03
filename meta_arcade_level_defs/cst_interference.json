@@ -1,0 +1,83 @@
+{
+
+	"meta":{
+		"description":"Pong with moving blocks in the way."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":false
+	},
+
+	"game_elements":{
+		"top_wall":false,
+		"bottom_wall":false,
+		"ball":true,
+		"opponent":true,
+		"blocks":true,
+		"static_barriers":false
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"ui_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_1":[200,200,160],
+		"indicator_color_2":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]}
+	},
+
+	"player_settings":{
+		"width":0.2,
+		"height":0.03,
+		"speed":0.01,
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{
+		"width":0.2,
+		"height":0.03,
+		"speed":0.01,
+		"color":[255,0,100],
+		"skill_level":{"distribution":"uniform", "low":0.4, "high":0.7},
+		"can_shoot":false,
+		"tracks_ball":true
+	},
+
+	"ball_settings":{
+		"size":0.05,
+		"speed":0.013,
+		"color":[255,180,0],
+		"harmful":false
+	},
+
+	"blocks_settings":{
+		"color":[202, 173, 255],
+		"creation_area":[-0.1,0.35,1.1,0.3],
+		"rows":{"distribution":"uniform", "low":1, "high":4},
+		"cols":{"distribution":"uniform", "low":3, "high":6},
+		"per_row":1,
+		"spacing":0.2,
+		"speed":{"distribution":"uniform", "low":0.003, "high":0.007},
+		"harmful":true,
+		"clear_path":false,
+		"static_weave_fall":"weave",
+		"points":0
+	},
+
+	"static_barrier_settings":{
+		"color":[255, 242, 158]
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}

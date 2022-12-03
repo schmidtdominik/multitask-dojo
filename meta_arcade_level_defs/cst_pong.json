@@ -1,0 +1,71 @@
+{
+
+	"meta":{
+		"description":"Bounce the ball past the enemy paddle while keeping it from crossing your side of the screen."
+	},
+
+	"actions":{
+		"up":false,
+		"down":false,
+		"left":true,
+		"right":true,
+		"fire":false
+	},
+
+	"game_elements":{
+		"top_wall":false,
+		"bottom_wall":false,
+		"ball":true,
+		"opponent":true,
+		"blocks":false,
+		"static_barriers":false
+	},
+
+	"display_settings":{
+		"background_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"ui_color":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_1":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]},
+		"indicator_color_2":{"distribution":"color", "hrange":[0.0, 1.0], "srange":[0.0, 1.0], "lrange":[0, 0.8]}
+	},
+
+	"player_settings":{
+		"width":0.2,
+		"height":0.03,
+		"speed":0.01,
+		"color":[255,255,255],
+		"steering":0.5
+	},
+
+	"opponent_settings":{
+		"width":0.2,
+		"height":0.03,
+		"speed":0.01,
+		"color":[255,0,100],
+		"skill_level":0.6,
+		"can_shoot":false,
+		"tracks_ball":true
+	},
+
+	"ball_settings":{
+		"size":{"distribution":"uniform", "low":0.04, "high":0.15},
+		"speed":0.013,
+		"color":[255,180,0],
+		"harmful":false
+	},
+
+	"blocks_settings":{},
+
+	"static_barrier_settings":{
+		"color":[150,100,200]
+	},
+
+
+	"image_settings":{
+		"color_inversion":false,
+		"rotation":0,
+		"hue_shift":0.0,
+		"saturation_shift":0.0,
+		"value_shift":0.0
+	}
+
+}
